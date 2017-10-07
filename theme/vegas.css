@@ -1,0 +1,18 @@
+.vegas {
+	background: radial-gradient(circle, red, darkred);
+	color: white;
+}
+
+.vegas #money {
+	color: orange;
+}
+
+.vegas #bet {
+	color: orange;
+	font-weight: bold;
+	text-align: center;
+}
+
+.vegas td {
+	border-radius: 5px;
+}

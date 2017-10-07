@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Blackjack</title>
+		<link href="base.css" rel="stylesheet">
+		<link href="theme/default.css" rel="stylesheet">
+		<link href="theme/vegas.css" rel="stylesheet">
+		<link href="theme/blue.css" rel="stylesheet">
+		<script src="scripts/main.js"></script>
+		<script src="scripts/nav.js"></script>
+		<script src="scripts/events.js"></script>
+	</head>
+<body class="default">
+	<section id="main_menu" class="active">
+		<h1>BlackJack</h1>
+		<table>
+			<tr>
+				<td onclick="goto('board')">
+					Play
+				</td>
+			</tr>
+			<tr>
+				<td onclick="goto('howto')">
+					How to play
+				</td>
+			</tr>
+			<tr>
+				<td onclick="goto('settings')">
+					Settings
+				</td>
+			</tr>
+		</table>
+	</section>
+	<section id="howto">
+		<h1>How to play</h1>
+		<table>
+			<tr>
+				<td>
+					<h2>Objective</h2>
+					<p>
+						Each participant attempts to beat the dealer by getting a count as close to 21 as possible, without going over 21.
+					</p>
+					<h2>Cards values</h2>
+					<p>
+						It is up to each individual player if an ace is worth 1 or 11. Face cards are 10 and any other card is its pip value.
+					</p>
+					<h2>Bets</h2>
+					<p>
+						Before the deal begins, each player places a bet, in chips, in front of him in the designated area. Minimum and maximum limits are established on the betting, and the general limits are from $2 to $500.
+					</p>
+					<h2>The deal</h2>
+					<p>
+						When all the players have placed their bets, the dealer gives one card face up to each player in rotation clockwise, and then one card face up to himself. Another round of cards is then dealt face up to each player, but the dealer takes his second card face down. Thus, each player except the dealer receives two cards face up, and the dealer receives one card face up and one card face down.
+					</p>
+					<h2>Naturals</h2>
+					<p>
+						If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving him a count of 21 in two cards, this is a natural or "blackjack." If any player has a natural and the dealer does not, the dealer immediately pays that player one and a half times the amount of his bet. If the dealer has a natural, he immediately collects the bets of all players who do not have naturals, (but no additional amount). If the dealer and another player both have naturals, the bet of that player is a stand-off (a tie), and the player takes back his chips.
+					</p>
+					<p>
+						If the dealer's face-up card is a ten-card or an ace, he looks at his face-down card to see if the two cards make a natural. If the face-up card is not a ten-card or an ace, he does not look at the face-down card until it is the dealer's turn to play.
+					</p>
+					<h2>The play</h2>
+					<p>
+						The player to the left goes first and must decide whether to "stand" (not ask for another card) or "hit" (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly). Thus, a player may stand on the two cards originally dealt him, or he may ask the dealer for additional cards, one at a time, until he either decides to stand on the total (if it is 21 or under), or goes "bust" (if it is over 21). In the latter case, the player loses and the dealer collects the bet wagered. The dealer then turns to the next player to his left and serves him in the same manner.
+					</p>
+					<p>
+						The combination of an ace with a card other than a ten-card is known as a "soft hand," because the player can count the ace as a 1 or 11, and either draw cards or not. For example with a "soft 17" (an ace and a 6), the total is 7 or 17. While a count of 17 is a good hand, the player may wish to draw for a higher total. If the draw creates a bust hand by counting the ace as an 11, the player simply counts the ace as a 1 and continues playing by standing or "hitting" (asking the dealer for additional cards, one at a time).
+					</p>
+					<h2>The dealer's play</h2>
+					<p>
+						When the dealer has served every player, his face-down card is turned up. If the total is 17 or more, he must stand. If the total is 16 or under, he must take a card. He must continue to take cards until the total is 17 or more, at which point the dealer must stand. If the dealer has an ace, and counting it as 11 would bring his total to 17 or more (but not over 21), he must count the ace as 11 and stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards.
+					</p>
+					<h2>Splitting pairs</h2>
+					<p>
+						If a player's first two cards are of the same denomination, such as two jacks or two sixes, he may choose to treat them as two separate hands when his turn comes around. The amount of his original bet then goes on one of the cards, and an equal amount must be placed as a bet on the other card. The player first plays the hand to his left by standing or hitting one or more times; only then is the hand to the right played. The two hands are thus treated separately, and the dealer settles with each on its own merits. With a pair of aces, the player is given one card for each ace and may not draw again. Also, if a ten-card is dealt to one of these aces, the payoff is equal to the bet (not one and one-half to one, as with a blackjack at any other time).
+					</p>
+					<h2>Doubling down</h2>
+					<p>
+						Another option open to the player is doubling his bet when the original two cards dealt total 9, 10, or 11. When the player's turn comes, he places a bet equal to the original bet, and the dealer gives him just one card, which is placed face down and is not turned up until the bets are settled at the end of the hand. With two fives, the player may split a pair, double down, or just play the hand in the regular way. Note that the dealer does not have the option of splitting or doubling down.
+					</p>
+					<h2>Settlement</h2>
+					<p>
+						A bet once paid and collected is never returned. Thus, one key advantage to the dealer is that the player goes first. If the player goes bust, he has already lost his wager, even if the dealer goes bust as well. If the dealer goes over 21, he pays each player who has stood the amount of that player's bet. If the dealer stands at 21 or less, he pays the bet of any player having a higher total (not exceeding 21) and collects the bet of any player having a lower total. If there is a stand-off (a player having the same total as the dealer), no chips are paid out or collected.
+					</p>
+					<h2>Source</h2>
+					<p>
+						<a href="http://www.bicyclecards.com/how-to-play/blackjack/">How to play blackjack</a>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td onclick="goto('main_menu')">
+					Back
+				</td>
+			</tr>
+		</table>
+	</section>
+	<section id="settings">
+		<h1>Settings</h1>
+		<h3>Themes</h3>
+		<table>
+			<tr>
+				<td id="preview" class="vegas" onclick="setTableColor(this)">
+					<span>Vegas</span>
+				</td>
+				<td id="preview" class="default" onclick="setTableColor(this)">
+					<span>Default</span>
+				</td>
+				<td id="preview" class="blue" onclick="setTableColor(this)">
+					<span>Blue</span>
+				</td>
+			</tr>
+			<tr>
+				<td onclick="goto('main_menu')" colspan="4">
+					Back
+				</td>
+			</tr>
+		</table>
+	</section>
+	<section id="board">
+		<div id="deck" onclick="Player.hit()"></div>
+		<ul id="cpu_hand"></ul>
+		<ul id="player_hand"></ul>
+		<table id="ctrl">
+			<tr>
+				<td id="money">
+					$100
+				</td>
+				<td>
+					<input id="bet" type="number" placeholder="25" min="2" max="500" value="25" />
+				</td>
+				<td onclick="bet(10)">
+					Bet
+				</td>
+				<td onclick="Player.stay()">
+					Stay
+				</td>
+				<td onclick="goto('main_menu')">
+					Menu
+				</td>
+			</tr>
+		</table>
+
+	</section>
+	<div id="modal-box"></div>
+</body>
+</html>

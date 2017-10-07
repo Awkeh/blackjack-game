@@ -1,0 +1,247 @@
+/* Super Style */
+
+body {
+	font-family: Calibri;
+}
+
+section {
+	border-radius: 5px;
+	padding: 5px 25px 25px 25px;
+	position: absolute;
+	width: 80%;
+	height: 50%;
+	left: 50%;
+	margin-left: -40%;
+	display: none;
+	visibility: hidden;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 15px 0px 15px 0px;
+	text-align: center;
+	cursor: pointer;
+}
+
+td:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	text-align: center;
+}
+
+p {
+	text-align: justify;
+}
+
+button {
+	color: #EAEAEA;
+	background-color: #272727;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	width: 100px;
+	min-height: 30px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #333;
+}
+
+/* GUI Components */
+
+#howto table tbody:first-child td:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+	cursor: default;
+}
+
+.active {
+	display: block;
+	visibility: visible;
+}
+
+.options {
+	position: relative;
+	width: 100px;
+	left: 50%;
+	margin-left: -50px;
+}
+
+.colorList {
+	display: inline-flex;
+}
+
+.colorList li {
+	cursor: pointer;
+	border: 2px solid black;
+	width: 50px;
+	height: 50px;
+	margin: 2px;
+}
+
+#modal-box {
+	background-color: rgba(0, 0, 0, 0.2);
+	text-align: center;
+	position: fixed;
+	width: 20%;
+	padding: 15px;
+	left: 50%;
+	margin-left: -10%;
+	top: -25%;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+.in {
+	top: 7% !important;
+}
+
+/* Themes */
+
+/*
+* - background         - Background color / image
+* - color              - Text color
+* - .theme #howto      - Howto sectio style
+* - .theme #money      - Player's money style
+* - .theme #bet        - Player's bet style
+* - .theme > table, tr - Menus' style
+* - .theme td          - Menus' options style
+*/
+
+#preview {
+	width: 25%;
+	height: 25px;
+}
+
+/* Cards */
+
+.card {
+	position: absolute;
+	width: 100px;
+	height: 136px;
+	top: 0px;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+}
+
+.card:hover {
+	box-shadow: -12px 12px 2px rgba(0, 0, 0, 0.2);
+	top: -10px;
+	z-index: 1;
+}
+
+.flipped {
+	object-position: -99999px 99999px; /* Some kind of black magic */
+	background-image: url("images/cards/cardBack.png");
+	content: url("images/cards/cardBack.png");
+	background-size: contain;
+	transform: rotateY(180deg);
+}
+
+.unflip {
+	animation: flip 2s ease 1;
+	transform: rotateY(0deg);
+}
+
+@keyframes flip {
+	0% { left: 0px; transform: rotateY(180deg); }
+	20% { left: -60px; transform: rotateY(180deg); }
+	40% { left: -60px; transform: rotateY(90deg); object-position: 0px 0px; }
+	60% { left: -60px; transform: rotateY(0deg); object-position: 0px 0px; }
+	80% { left: -60px; transform: rotateY(0deg); object-position: 0px 0px; }
+	100% { left: 0px; transform: rotateY(0deg); object-position: 0px 0px; }
+}
+
+@-webkit-keyframes flip {
+	0% { left: 0px; transform: rotateY(180deg); }
+	20% { left: -60px; transform: rotateY(180deg); }
+	40% { left: -60px; transform: rotateY(90deg); object-position: 0px 0px; }
+	60% { left: -60px; transform: rotateY(0deg); object-position: 0px 0px; }
+	80% { left: -60px; transform: rotateY(0deg); object-position: 0px 0px; }
+	100% { left: 0px; transform: rotateY(0deg); object-position: 0px 0px; }
+}
+
+@-moz-keyframes flip {
+	0% { left: 0px; transform: rotateY(180deg); }
+	20% { left: -60px; transform: rotateY(180deg); }
+	40% { left: -60px; transform: rotateY(90deg); object-position: 0px 0px; }
+	60% { left: -60px; transform: rotateY(0deg); object-position: 0px 0px; }
+	80% { left: -60px; transform: rotateY(0deg); object-position: 0px 0px; }
+	100% { left: 0px; transform: rotateY(0deg); object-position: 0px 0px; }
+}
+
+@-o-keyframes flip {
+	0% { left: 0px; transform: rotateY(180deg); }
+	20% { left: -60px; transform: rotateY(180deg); }
+	40% { left: -60px; transform: rotateY(90deg); object-position: 0px 0px; }
+	60% { left: -60px; transform: rotateY(0deg); object-position: 0px 0px; }
+	80% { left: -60px; transform: rotateY(0deg); object-position: 0px 0px; }
+	100% { left: 0px; transform: rotateY(0deg); object-position: 0px 0px; }
+}
+
+#deck{
+	background-image: url("images/cards/cardBack.png");
+	background-size: contain;
+	box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	width: 100px;
+	height: 136px;
+	right: 0px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+#cpu_hand, #player_hand {
+	position: relative;
+	height: 160px;
+}
+
+#money {
+	font-weight: bold;
+	color: green;
+}
+
+#bet {
+	background: transparent;
+	padding: 3px 0px 3px 7px;
+	border: none;
+	width: auto;
+	width: -moz-available;
+}
+
+#ctrl {
+	position: fixed;
+	width: 100%;
+	left: 50%;
+	margin-left: -50%;
+	bottom: 0%;
+}
+
+#ctrl tr td {
+	width: 20% !important;
+}
+
+#ctrl tr:nth-child(2) {
+	padding: 0px;
+}
